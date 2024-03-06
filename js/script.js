@@ -66,3 +66,11 @@ console.log('Prezzo biglietto se over 65', elderlyPrice);
 
     console.log(finalPrice);
 });
+
+//Bottone cancella
+
+let clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click', function () {
+    document.querySelector('#user-km').value = ' ';
+    document.querySelector('#user-age').value = ' ';
+});
