@@ -52,17 +52,20 @@ console.log('Prezzo biglietto se over 65', elderlyPrice);
 
     if (userAge < 18) {
 
-        finalPrice = 'Il costo del tuo biglietto è: ' + underagePrice;
+        finalPrice = underagePrice + ' €';
 
     } else if (userAge > 65) {
 
-        finalPrice = 'Il costo del tuo biglietto è: ' + elderlyPrice;
+        finalPrice = elderlyPrice + ' €';
 
     } else {
 
-        finalPrice = 'Il costo del tuo biglietto è: ' + ticketPrice;
+        finalPrice = ticketPrice + ' €';
 
     }
+
+    let printPrice = document.querySelector('#price-recipient');
+    printPrice.innerHTML = finalPrice;
 
     console.log(finalPrice);
 });
@@ -73,4 +76,6 @@ let clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', function () {
     document.querySelector('#user-km').value = ' ';
     document.querySelector('#user-age').value = ' ';
+    document.querySelector('#price-recipient').innerHTML = ' ';
+    document.querySelector('#goodbye').innerHTML = 'Spero di rivederti presto!';
 });
